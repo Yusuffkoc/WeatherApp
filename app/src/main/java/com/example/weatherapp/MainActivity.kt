@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-
         weatherTask().execute()
         binding.swipeLayout.setOnRefreshListener {
             weatherTask().execute()
