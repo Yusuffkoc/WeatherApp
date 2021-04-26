@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+    <string name="email">Email:  %1$s</string>
+    <string name="phone">Phone:  %1$s</string>
+    <string name="my_phone">5423891484</string>
+    <string name="my_email">yusfkoc15@gmail.com</string>
+
 </resources>

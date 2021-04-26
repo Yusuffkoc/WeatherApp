@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:padding="25dp"
     android:background="@drawable/gradient_bg"
-    tools:context=".MainActivity">
+    tools:context=".ui.main.MainActivity">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeLayout"
@@ -372,8 +372,9 @@
                     </Space>
 
                     <LinearLayout
+                        android:id="@+id/btninfo"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="#3CF1EBF1"
                         android:gravity="center"
@@ -388,29 +389,14 @@
 
                         </ImageView>
 
-                        <Space
-                            android:layout_width="5dp"
-                            android:layout_height="wrap_content">
-
-                        </Space>
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
                             android:text="Created by"
                             android:textSize="12sp">
 
                         </TextView>
-
-                        <TextView
-                            android:id="@+id/info"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="YusufK"
-                            android:textSize="14sp">
-
-                        </TextView>
-
 
                     </LinearLayout>
 

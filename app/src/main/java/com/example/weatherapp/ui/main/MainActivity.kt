@@ -1,23 +1,18 @@
-package com.example.weatherapp
+package com.example.weatherapp.ui.main
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.widget.ProgressBar
-import android.widget.RelativeLayout
-import android.widget.TextView
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.weatherapp.databinding.ActivityMainBinding
 import com.example.weatherapp.models.ResponseModel
+import com.example.weatherapp.ui.aboutme.AboutMeActivity
 import com.google.gson.Gson
-import org.json.JSONObject
+import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Exception
 import java.net.URL
-import java.nio.charset.Charset
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -42,6 +37,12 @@ class MainActivity : AppCompatActivity() {
         binding.swipeLayout.setOnRefreshListener {
             weatherTask().execute()
         }
+
+        btninfo.setOnClickListener {
+            val intent= Intent(this, AboutMeActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     inner class  weatherTask(): AsyncTask<String, Void, String>()
